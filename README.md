@@ -2,7 +2,7 @@
 
 An interactive AI-powered chatbot that conducts candidate interviews for the **FedEx Ground ISP Delivery Driver** role at **Tsavo West Inc**.
 
-Built with **Streamlit** for the chat UI and **Groq (Llama 3.3/Mixtral)** for blazing-fast dynamic question generation and answer evaluation.
+Built with **Streamlit** for the chat UI and **Groq (Llama 3.3)** for blazing-fast dynamic question generation and answer evaluation.
 
 ---
 
