@@ -85,8 +85,6 @@ Greeting → Mandatory Questions (6) → Preferred Questions (3) → Decision
 ### Installation
 
 ```bash
-# Clone or navigate to the project directory
-cd aayush
 
 # Install dependencies
 pip install -r requirements.txt
@@ -121,7 +119,7 @@ The chatbot includes several safety mechanisms:
 ## 📂 File Structure
 
 ```
-aayush/
+hiring-chatbot/
 ├── .env                # API Key storage (Git ignored)
 ├── app.py              # Streamlit chat interface
 ├── agent.py            # LLM conversation orchestrator
