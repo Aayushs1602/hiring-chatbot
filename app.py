@@ -121,8 +121,32 @@ if not st.session_state.api_key:
 # ── Sidebar ─────────────────────────────────────────────────────────────────
 
 with st.sidebar:
+    # st.markdown("### ⚡ Settings (Groq)")
 
-    api_key = os.getenv("GROQ_API_KEY")
+    # API Key input
+    api_key = st.text_input(
+        "Groq API Key",
+        value=st.session_state.api_key if st.session_state.api_key != "your_groq_key_here" else "",
+        type="password",
+        placeholder="gsk_...",
+        help="Required to power the AI interviewer. Get one at https://console.groq.com/keys",
+    )
+    if api_key and api_key != st.session_state.api_key:
+        st.session_state.api_key = api_key
+        st.session_state.initialized = False
+        st.session_state.interview_started = False
+
+    # Model Selector
+    # model_id = st.selectbox(
+    #     "AI Model",
+    #     options=AVAILABLE_MODELS,
+    #     index=AVAILABLE_MODELS.index(st.session_state.model_id),
+    #     help="Llama 3.3 70B is recommended for best quality.",
+    # )
+    # if model_id != st.session_state.model_id:
+    #     st.session_state.model_id = model_id
+    #     st.session_state.initialized = False
+    #     st.session_state.interview_started = False
 
     st.markdown("---")
 
